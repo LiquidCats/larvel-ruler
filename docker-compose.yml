@@ -1,0 +1,17 @@
+version: '3.7'
+
+networks:
+  lc-backend:
+    name: lc-backend
+    driver: 'bridge'
+
+services:
+  ruler-php:
+    container_name: ruler-php
+    build:
+      context: './'
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/var/www/ruler
+    networks:
+      - lc-backend
