@@ -2,8 +2,6 @@
 
 //--rules=@Symfony,@PhpCsFixer,@PSR1,@PSR2
 $finder = PhpCsFixer\Finder::create()
-    ->notPath('bootstrap/cache')
-    ->notPath('storage')
     ->notPath('vendor')
     ->in(__DIR__)
     ->name('*.php')
